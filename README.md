@@ -1,3 +1,8 @@
+# Full Stack Open - Part 0
+
+## 0.4 New Note Diagram 
+This diagram shows what happens when a user creates a new note.
+
 ```mermaid
 sequenceDiagram
     participant browser
