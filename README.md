@@ -1,5 +1,3 @@
-## 0.4: New Note Diagram
-
 ```mermaid
 sequenceDiagram
     participant browser
@@ -14,10 +12,20 @@ sequenceDiagram
     deactivate server
 
     browser->>server: GET /notes
+    activate server
     server-->>browser: HTML page
+    deactivate server
+
+    browser->>server: GET /main.css
+    server-->>browser: CSS file
+
+    browser->>server: GET /main.js
+    server-->>browser: JavaScript file
+
+    Note right of browser: Browser fetches updated notes
 
     browser->>server: GET /data.json
     server-->>browser: Updated notes JSON
 
-    Note right of browser: New note is rendered
+    Note right of browser: New note is rendered on the page
 ```
